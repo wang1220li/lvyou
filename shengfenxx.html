@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>宽带拆机预约</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/caiji.css" />
+    <script src="js/public640.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+		<div class="zt_body">
+			<div class="tou_img">
+				<img src="images/tou_img.jpg"/>
+			</div>
+			<p class="biaoti">输入您的详细信息：</p>
+			<div class="yh_xinx">
+				<ul>
+					<li>
+						<div class="zuo_img">
+							<img src="images/sfz.png"/>
+						</div>
+						<div class="xx_jilu">
+							<input type="text" name="" id="" value="" placeholder="请输入您的身份证号码" maxlength="19"/>
+							<span class="tishi">请输入您的正确姓名</span>
+						</div>
+					</li>
+					<li>
+						<div class="zuo_img">
+							<img src="images/dingwei.png"/>
+						</div>
+						<div class="xx_jilu">
+							<input type="text" name="" id="diqu" value="" placeholder="选择您宽带的所在地" maxlength="11" readonly />
+							<img src="images/xiajt.png" class="x_jt"/>
+							<img src="images/shangjt.png" class="s_jt no"/>
+							<span class="tishi1">请输入您的正确姓名</span>
+						</div>
+					</li>
+					<li>
+						<div class="zuo_img">
+							
+						</div>
+						<div class="xx_jilu">
+							<input type="text" name="" id="" value="" placeholder="输入您的街道/单元楼/门牌号等详细地址" maxlength=""/>
+							
+							<span class="tishi2">请输入您的正确姓名</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="xiananniu">
+				<a href="ding.html">
+				<p>我要拆机</p>
+				</a>
+			</div>
+			
+				<div class="diquxuanz">
+				<div class="nei_tanc">
+					<p class="t_b">配送至 <span id="guanb">X</span></p>
+					 <div class="nei_tou">
+					 	 <ul>
+					 	 	 <li class="n1">请选择</li>
+					 	 	 <li class="n2 no"></li>
+					 	 	 <li class="n3 no"></li>
+					 	 	 <li class="n4 no"></li>
+					 	 </ul>
+					 </div>
+					 <div class="shujv">
+						 	<ul>
+						 		<li>
+						 			<p class="yiji">北京1</p>
+						 			<p class="yiji">北京2</p>
+						 			<p class="yiji">北京3</p>
+						 			<p class="yiji">北京4</p>
+						 			<p class="yiji">北京5</p>
+						 			<p class="yiji">北京6</p>
+						 			<p class="yiji">北京7</p>
+						 			<p class="yiji">北京8</p>
+						 			<p class="yiji">北京9</p>
+						 		</li>
+						 		<li>
+						 			<p class="erji">北京11</p>
+						 			<p class="erji">北京21</p>
+						 			<p class="erji">北京31</p>
+						 			<p class="erji">北京41</p>
+						 			<p class="erji">北京51</p>
+						 			<p class="erji">北京61</p>
+						 			<p class="erji">北京71</p>
+						 			<p class="erji">北京81</p>
+						 			<p class="erji">北京91</p>
+						 		</li>
+						 		<li>
+						 			<p class="sanji">北京111</p>
+						 			<p class="sanji">北京211</p>
+						 			<p class="sanji">北京311</p>
+						 			<p class="sanji">北京411</p>
+						 			<p class="sanji">北京511</p>
+						 			<p class="sanji">北京611</p>
+						 			<p class="sanji">北京711</p>
+						 			<p class="sanji">北京811</p>
+						 			<p class="sanji">北京911</p>
+						 		</li>
+						 		<li>
+						 			<p class="siji">北京1111</p>
+						 			<p class="siji">北京2111</p>
+						 			<p class="siji">北京3111</p>
+						 			<p class="siji">北京4111</p>
+						 			<p class="siji">北京5111</p>
+						 			<p class="siji">北京6111</p>
+						 			<p class="siji">北京7111</p>
+						 			<p class="siji">北京8111</p>
+						 			<p class="siji">北京9111</p>
+						 		</li>
+						 	</ul>
+					 </div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+      <script>			
+//			地区联动
+		$("#diqu").click(function(){
+			 $(".diquxuanz").show();
+			 $(".shujv ul").animate({
+			    left:'0', 
+			  },10);
+			 $(".nei_tou li").css("border","none").text('');
+			 $(".n1").text("请选择");
+			 $(".x_jt,.s_jt").toggle();
+		});
+		$("#guanb").click(function(){
+			 $(".diquxuanz").hide();
+		});
+		$(".yiji").click(function(){
+			 var yij=$(this).text();
+			 $(".n1").text(yij);
+			 $(".shujv ul").animate({
+			    left:'-6.2rem', 
+			  },500);
+			  $(".nei_tou li").css("border","none");
+			  $(".n1").css("border-bottom","1px solid #ff7744");
+		});
+		$(".erji").click(function(){
+			 var erj=$(this).text();
+			 $(".n2").show();
+			 $(".n2").text(erj);
+			 $(".shujv ul").animate({
+			    left:'-12.4rem', 
+			  },500);
+			  $(".nei_tou li").css("border","none");
+			  $(".n2").css("border-bottom","1px solid #ff7744");
+		});
+		$(".sanji").click(function(){
+			 var sanj=$(this).text();
+			 $(".n3").show();
+			 $(".n3").text(sanj);
+			 $(".shujv ul").animate({
+			    left:'-18.6rem', 
+			  },500);
+			  $(".nei_tou li").css("border","none");
+			  $(".n3").css("border-bottom","1px solid #ff7744");
+		});
+		$(".siji").click(function(){
+			var sij=$(this).text();
+			$(".n4").text(sij);
+			 $(".n4").show();
+			var yij=$(".n1").text();
+			var erj=$(".n2").text();
+			var sanj=$(".n3").text();
+			var sij=$(".n4").text();
+			$(".youj").show();
+			$("#diqu").val(yij+"  "+erj+"  "+sanj+"  "+sij);
+			$(".diquxuanz").hide();
+			$(".x_jt,.s_jt").toggle();
+			$(".nei_tou li").css("border","none");
+			$(".n4").css("border-bottom","1px solid #ff7744");
+		});
+
+			$(".n1").click(function(){
+			  $(".shujv ul").animate({
+			    left:'0', 
+			  },500);
+			  $(".n2,.n3").hide();
+			  $(".nei_tou li").css("border","none");
+			$(this).css("border-bottom","1px solid #ff7744");
+		 });
+		 $(".n2").click(function(){
+			  $(".shujv ul").animate({
+			    left:'-6.2rem', 
+			  },500);
+			  $(".n3").hide();
+			  $(".nei_tou li").css("border","none");
+			$(this).css("border-bottom","1px solid #ff7744");
+		 });
+		 $(".n3").click(function(){
+			  $(".shujv ul").animate({
+			    left:'-12.4rem', 
+			  },500);
+			  $(".n4").hide();
+			  $(".nei_tou li").css("border","none");
+			$(this).css("border-bottom","1px solid #ff7744");
+		 });
+</script>
+</html>

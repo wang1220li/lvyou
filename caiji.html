@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>宽带拆机预约</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/caiji.css" />
+    <script src="js/public640.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+		<div class="zt_body">
+			<div class="tou_img">
+				<img src="images/tou_img.jpg"/>
+			</div>
+			<p class="biaoti">输入您的详细信息：</p>
+			<div class="yh_xinx">
+				<ul>
+					<li>
+						<div class="zuo_img">
+							<img src="images/rem.png"/>
+						</div>
+						<div class="xx_jilu">
+							<input type="text" name=""  class="xingming" value="" placeholder="请输入您的姓名" maxlength="20"/>
+							<h6 class="shuruxx0">
+								<ul>
+									<li>张小三</li>
+									<li>张小四</li>
+									<li>张小五</li>
+									<li>张小六</li>
+									<li>张小七</li>
+								</ul>
+							</h6>
+							<span class="tishi">请输入您的正确姓名</span>
+							
+						</div>
+					</li>
+					<li>
+						<div class="zuo_img">
+							<img src="images/shouji.png"/>
+						</div>
+						<div class="xx_jilu">
+							<input type="tel" name="" class="sousuo" value="" placeholder="请输入您的联系电话" maxlength="11"/>
+							<h6 class="shuruxx1">
+								<ul>
+									<li>151****1111</li>
+									<li>151****2222</li>
+									<li>151****3333</li>
+									<li>151****4444</li>
+									<li>151****5555</li>
+								</ul>
+							</h6>
+							<span class="tishi1">请输入您的正确姓名</span>
+						</div>
+					</li>
+					<li>
+						<div class="zuo_img">
+							<img src="images/ys.png"/>
+						</div>
+						<div class="xx_jilu">
+							<input type="text" name="" id="yanz" value="" placeholder="请输入验证码" maxlength="6"/>
+							<div id="get_message">
+					 				<span>点击获取</span>
+					 			</div>
+							<span class="tishi2">请输入验证码</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="yueduxieyi">
+				<div class="diand">
+					<p></p>
+				</div>
+				<h6>我已阅读并同意<span class="xy">《中国联通*******协议》</span></h6>
+			</div>
+			<div class="wenxintishi">
+				<p class="wxts"><img src="images/dengpao.png"/>温馨提示：</p>
+				<ul>
+					<li>1.文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文文字文字文字文字文字文字文字文字文字。</li>
+					
+				</ul>
+			</div>
+			<div class="xiananniu">
+				<a href="shengfenxx.html">
+				<p>下一步</p>
+				</a>
+			</div>
+			<!--弹层-->
+			<div class="mask">
+				<div class="content">
+					<p class="xieyi">中国联通*****协议</p>
+					<ul class="tiaoli">
+						<li>
+							1.尊敬的用户，您已成功退出冰激凌套餐团购活动，次月1日生效，感参与。
+						</li>
+						<li>
+							2.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+						<li>
+							3.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+						<li>
+							4.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+						<li>
+							5.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+						<li>
+							6.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+						<li>
+							7.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+						<li>
+							8.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+						<li>
+							9.已成功退出冰激凌套餐团购活动，次月1日生效，感谢您的参与。
+						</li>
+					</ul>
+					<div class="anniu clearfloat">
+						<div class="anniu-left">取消</div>
+						<div class="anniu-right">同意</div>
+						<div class="zhedang">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+//		验证只能输入数字
+		$(".sousuo").keyup(function(){       
+		        var tmptxt=$(this).val();       
+		        $(this).val(tmptxt.replace(/\D|^0/g,''));       
+		    }).bind("paste",function(){       
+		        var tmptxt=$(this).val();       
+		        $(this).val(tmptxt.replace(/\D|^0/g,''));       
+		    }).css("ime-mode", "disabled");
+//手机信息确认
+		$(".xingming").keyup(function(){  
+		   $(this).next().show();
+		});
+		$(".sousuo").keyup(function(){  
+		   $(this).next().show();
+		});
+		$(".shuruxx0 li").click(function(){
+			var  zhi=$(this).text();
+			$(".xingming").val(zhi);
+			$(this).parent().parent().hide();
+			$(".tishi").hide();
+		});
+		$(".shuruxx1 li").click(function(){
+			var  zhi=$(this).text();
+			$(".sousuo").val(zhi);
+			$(this).parent().parent().hide();
+			$(".tishi1").hide();
+		});
+		$(".xingming").blur(function(){
+			var  zhi=$(this).val();
+			 if(zhi==""){
+			 	$(".tishi").show();
+			 }else{
+			 	$(".tishi").hide();
+			 }
+		});
+		$("#yanz").blur(function(){
+			var  zhi=$(this).val();
+			 if(zhi==""){
+			 	$(".tishi2").show();
+			 }else{
+			 	$(".tishi2").hide();
+			 }
+		});
+	//		验证手机号
+		$(".sousuo").change(function(){
+			  var phone = jQuery(this).val();
+		      var flag = false;
+		      var message = "";
+		      var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/;  
+		      $(".tishi1").hide();
+		      if(phone == ''){
+		      	$(".tishi1").show();
+		        message = "手机号码不能为空！";
+		        $(".tishi1").text(message);
+		      }else if(phone.length !=11){
+		      	$(".tishi1").show();
+		        message = "请输入有效的手机号码！";
+		        $(".tishi1").text(message);
+		      }else if(!myreg.test(phone)){
+		      	$(".tishi1").show();
+		        message = "请输入有效的手机号码！";
+		        $(".tishi1").text(message);
+		      }else{
+		          flag = true;
+		      }
+		});	
+		 // 标志是否可以点击
+		  var isDisabled = false;
+		  $("#get_message").click(function () {
+		 
+		
+		    // 在 isDiabled为true的时候不执行 return后的代码,第一次为 false,会执行 return之后的代码
+		    if (isDisabled) {
+		      return;
+		    }
+		    // 已经点击了发送,标识一下
+		    isDisabled = true;
+		
+		    var count=60; // 倒计时的起点
+		
+		    // 添加 disabled样式,提前写好
+		   // $("#get_message").addClass('disabled_btn');
+		
+		    $("#get_message").addClass("disabled_btn").text(count+"秒后重发"); // 按钮设置为不可点击
+		
+		    var timer=setInterval(function () {  // 倒计时
+		      count--;
+		      $("#get_message").text(count+"秒后重发");
+		      if(count<=-1){
+		        clearInterval(timer); // 清除定时器
+		        // 移除 disabled样式
+		       // $("#get_message").removeClass('disabled_btn')
+		        // 重新又可以点击了
+		        isDisabled = false;
+		        $("#get_message").removeClass("disabled_btn").text("点击获取");
+		      }
+		    },1000);
+		  });
+		  
+//		  协议阅读点击事件
+        $(".diand").click(function(){
+        	$(".diand p").toggle();
+        });
+        $(".xy").click(function(){
+            $(".mask").css("display","block")
+		})
+		$(".anniu-left,.anniu-right").click(function(){
+    		$(".mask").css("display","none")
+		})
+	</script>
+</html>
